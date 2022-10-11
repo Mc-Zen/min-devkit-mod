@@ -18,6 +18,10 @@ add_library(${target} INTERFACE
 	"c74support/c74_msp.h"
 	"c74support/c74_ui.h"
 	"c74support/c74_ui_graphics.h"
+	"script/macros.cmake"
+	"script/add_max_target.cmake"
+	"script/max-posttarget.cmake"
+	"script/max-pretarget.cmake"
 )
 target_include_directories(${target} 
 	INTERFACE 

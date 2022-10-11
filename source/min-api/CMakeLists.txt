@@ -43,7 +43,14 @@ file(GLOB_RECURSE MIN_API_HEADERS
 set(version 0.6.0)
 set(target min-api) # uniform naming
 
-add_library(${target} INTERFACE ${MIN_API_HEADERS})
+add_library(${target} INTERFACE ${MIN_API_HEADERS}
+	"script/add_min_target.cmake"
+	"script/min-posttarget.cmake"
+	"script/min-pretarget.cmake"
+	"script/c74_set_target_xcode_warning_flags.cmake"
+	"test/add_min_unit_test.cmake"
+	"test/min-object-unittest.cmake"
+)
 add_library(API ALIAS min-api) # alias for backwards compatibility
 add_library(min-api-test INTERFACE)
 target_include_directories(min-api-test INTERFACE "test")
