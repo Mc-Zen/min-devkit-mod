@@ -45,11 +45,11 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/source/min-api/script/min-package.cmake)
 
 
 # Add the min-api, if it exists
-if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/source/min-api/CMakeLists.txt")
-    add_subdirectory(source/min-api)
-else()
-    message(FATAL_ERROR "The min-api repository is missing. Maybe you did not clone recursively?")
-endif ()
+#if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/source/min-api/CMakeLists.txt")
+#    add_subdirectory(source/min-api)
+#else()
+#    message(FATAL_ERROR "The min-api repository is missing. Maybe you did not clone recursively?")
+#endif ()
 # Add the min-lib, if it exists
 if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/source/min-lib/CMakeLists.txt")
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/source/min-lib)

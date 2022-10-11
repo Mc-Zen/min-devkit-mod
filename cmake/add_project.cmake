@@ -26,6 +26,6 @@ function(add_project target)
 		
 
 	add_definitions(-DC74_USE_MIN_LIB)
-	add_min_target(${target} SOURCES ${PARAMS_SOURCES} OUTPUT_DIRECTORY ${OUTPUT_DIRECTORY}) # no quotes!
+	#add_min_target(${target} SOURCES ${PARAMS_SOURCES} OUTPUT_DIRECTORY ${OUTPUT_DIRECTORY}) # no quotes!
 
 endfunction()

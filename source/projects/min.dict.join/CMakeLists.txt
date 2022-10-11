@@ -3,8 +3,10 @@
 
 cmake_minimum_required(VERSION 3.0)
 
-#set(C74_MIN_API_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../min-api)
-#include(${C74_MIN_API_DIR}/script/min-pretarget.cmake)
+cmake_minimum_required(VERSION 3.0)
+
+set(C74_MIN_API_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../min-api)
+include(${C74_MIN_API_DIR}/script/min-pretarget.cmake)
 
 
 #############################################################
@@ -12,34 +14,28 @@ cmake_minimum_required(VERSION 3.0)
 #############################################################
 
 
-#include_directories( 
-#	"${C74_INCLUDES}"
-#)
+include_directories( 
+	"${C74_INCLUDES}"
+)
 
 
-#set( SOURCE_FILES
-#	${PROJECT_NAME}.cpp
-#)
+set( SOURCE_FILES
+	${PROJECT_NAME}.cpp
+)
 
 
-#add_library( 
-#	${PROJECT_NAME} 
-#	MODULE
-#	${SOURCE_FILES}
-#)
+add_library( 
+	${PROJECT_NAME} 
+	MODULE
+	${SOURCE_FILES}
+)
 
 
-#include(${C74_MIN_API_DIR}/script/min-posttarget.cmake)
-
-
-set(target min.dict.join)
-add_project(${target} SOURCES min.dict.join.cpp)	
-
-add_auto_unit_test(${target})
+include(${C74_MIN_API_DIR}/script/min-posttarget.cmake)
 
 
 #############################################################
 # UNIT TEST
 #############################################################
 
-#include(${CMAKE_CURRENT_SOURCE_DIR}/../../min-api/test/min-object-unittest.cmake)
+include(${C74_MIN_API_DIR}/test/min-object-unittest.cmake)
