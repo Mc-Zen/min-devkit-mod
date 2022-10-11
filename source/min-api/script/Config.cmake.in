@@ -1,0 +1,6 @@
+@PACKAGE_INIT@
+
+include("${CMAKE_CURRENT_LIST_DIR}/C74Targets.cmake")
+
+check_required_components("@PROJECT_NAME@")
+#check_required_components(API max-sdk-base)
